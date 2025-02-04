@@ -12,3 +12,13 @@ def containsDuplicate(nums):
             return True
         hashset.add(i)
     return False
+
+# there is one more approach that is bruet forch in that we will create two loops and check if the element is there or not 
+
+def containsduplicate(nums):
+    for i in range(len(nums)):
+        for j in range(i+1, len(nums)):
+            if nums[i] == nums[j]:
+                return True
+    return False
+# but this method has timecomplexity of O(n^2) which is not good so we will use the above method
